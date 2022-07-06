@@ -1,6 +1,6 @@
 {
-  "name": "@bornova/formulajs",
-  "version": "4.0.0",
+  "name": "bornova-formulajs",
+  "version": "1.0.9",
   "description": "JavaScript implementation of most Microsoft Excel formula functions",
   "author": "Formulajs",
   "homepage": "https://github.com/formulajs/formulajs#readme",
@@ -29,8 +29,10 @@
   },
   "files": [
     "bin/cli.js",
-    "lib"
+    "lib",
+    "types"
   ],
+  "types": "./types/index.d.ts",
   "scripts": {
     "prebuild": "npm run prettier && npm run lint && npm run test:coverage",
     "build": "rollup -c",
@@ -43,7 +45,8 @@
     "test": "mocha",
     "test:browser": "mocha --reporter mochawesome",
     "test:coverage": "c8 mocha",
-    "test:watch": "mocha --watch --parallel --reporter min"
+    "test:watch": "mocha --watch --parallel --reporter min",
+    "types": "tsc src/index.js --declaration --allowJs --emitDeclarationOnly --outDir types"
   },
   "dependencies": {
     "bessel": "^1.0.2",
@@ -63,6 +66,7 @@
     "prettier": "^2.7.1",
     "rollup": "^2.75.7",
     "rollup-plugin-terser": "^7.0.2",
-    "should": "^13.2.3"
+    "should": "^13.2.3",
+    "typescript": "^4.7.4"
   }
 }
