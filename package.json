@@ -1,6 +1,6 @@
 {
   "name": "bornova-formulajs",
-  "version": "3.1.4",
+  "version": "1.1.0",
   "description": "JavaScript implementation of most Microsoft Excel formula functions",
   "author": "Formulajs",
   "homepage": "https://github.com/formulajs/formulajs#readme",
